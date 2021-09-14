@@ -127,6 +127,49 @@ while (a < 100) {
     console.log("цифра = " + a);
 
 }
+/*
+Второй вариант
+*/
+
+var x = 2;
+
+function isPrime(num) {
+    var i = 2;
+    while (i < num / 2) {
+        if (num % i == 0) {
+            return false;
+        }
+        i++
+    }
+    return true
+}
+
+while (x <= 100) {
+    if (isPrime(x)) {
+        console.log(x);
+    }
+    x++;
+}
+
+//третий вариант, вложенный while на while
+
+var i = 2;
+
+while (i <= 100) {
+    var j = 2;
+    while (j <= i) {
+        if (i % j == 0) {
+            break;
+        }
+        j++
+    }
+    if (j == i) {
+        console.log(i);
+    }
+    i++;
+}
+
+
 //---------------------------------
 
 // 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
@@ -161,6 +204,20 @@ for (var item of goods) {
 }
 alert('Общая сумма ' + s)
 
+/*
+С помошью функции-2-й вариант
+*/
+
+function countBasketPrice(mas) {
+    var sumBasket = 0;
+    for (var item of mas) {
+        sumBasket = sumBasket + (item.price * item.count)
+    }
+    return sumBasket
+}
+
+console.log(countBasketPrice(goods));
+
 
 //----------------------------------------------------
 
@@ -174,7 +231,21 @@ for (var i = 0; i <= a; i++) {
     console.log(i)
 };
 
+/*
+второй вариант
+*/
 
+var stringStar = "";
+for (var i = 0; i < 20; i++) {
+    stringStar += 'X';
+    console.log(stringStar);
+}
+
+/*
+3 вариант
+*/
+
+for (var i = 1, line = 'x'; i <= 20; console.log(line), i++, line += 'x');
 //----------------------------------------
 
 // 5. *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
