@@ -231,21 +231,7 @@ for (var i = 0; i <= a; i++) {
     console.log(i)
 };
 
-/*
-второй вариант
-*/
 
-var stringStar = "";
-for (var i = 0; i < 20; i++) {
-    stringStar += 'X';
-    console.log(stringStar);
-}
-
-/*
-3 вариант
-*/
-
-for (var i = 1, line = 'x'; i <= 20; console.log(line), i++, line += 'x');
 //----------------------------------------
 
 // 5. *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
@@ -261,3 +247,19 @@ for (var i = 0; i < 20; i++) {
     a = a + 'x'
 
 }
+
+/*
+второй вариант
+*/
+
+var stringStar = "";
+for (var i = 0; i < 20; i++) {
+    stringStar += 'X';
+    console.log(stringStar);
+}
+
+/*
+3 вариант
+*/
+
+for (var i = 1, line = 'x'; i <= 20; console.log(line), i++, line += 'x');
